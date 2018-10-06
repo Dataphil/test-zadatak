@@ -80,16 +80,121 @@ nav {
         color: $color-font;
         float: right;
         margin-left: 30px;
-        &:first-of-type{
+        &:first-of-type {
             margin-right: 100px;
         }
         &:hover {
             background-color: $color-font;
             color: white;
         }
+    
     }
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.offers {
+    background-color: $color-section-background;
+
+    div.wrapper {
+    padding: 20px 250px;
+
+        div {
+            padding: 50px 80px;
+            visibility: hidden;
+            &.left {
+                float: left;
+            }
+
+            &.right {
+                float: right;
+            }
+            h2 {
+               text-transform: uppercase;
+            }
+            p {
+                color: $color-red;
+            }
+    }
+
+     img {
+
+         width: 200px;
+         border-radius: 100px;
+         opacity: 0.5;  
+
+            &.left {
+                float: left;
+            }
+
+            &.right {
+                float: right;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.left:hover + div.left {
+             visibility: visible;
+            }
+
+            &.right:hover + div.right {
+              visibility: visible;
+            }
+
+     }
+
+    }
+}
+
+// .offers {
+//     padding: 20px 200px;
+//     border: solid 1px red; 
+//     height: 1000px;
+//     img {
+//         width: 200px;
+//         border-radius: 100px;   
+//         &.left {
+//             float: left;
+//         }
+//         &.right {
+//             float: right;
+//         }
+//     }
+//     div {
+//         //visibility: hidden;
+//         height: 200px;
+//         margin: 50px 0px;
+//         border: solid 1px red;
+//     }
+
+//     div.left {
+//         float: left;
+//         margin-left: 100px;
+//         clear: right;
+//     }
+
+//    div.right {
+//         float: right;
+//         margin-right: 100px;
+
+//     }
+
+//     img.left:hover + div.left {
+//         visibility: visible;
+//     }
+
+//    img.right:hover + div.right {
+//         visibility: visible;
+//     }
+
+// }
 
 
 
