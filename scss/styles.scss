@@ -70,6 +70,28 @@ nav {
 
 
 
+.buttons {
+    padding: 1.5em 0;
+    button {
+        border: solid 1px $color-font;
+        border-radius: 2em;
+        background-color: white;
+        padding: 1em;
+        color: $color-font;
+        float: right;
+        margin-left: 30px;
+        &:first-of-type{
+            margin-right: 100px;
+        }
+        &:hover {
+            background-color: $color-font;
+            color: white;
+        }
+    }
+}
+
+
+
 
 
 
