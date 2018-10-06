@@ -1,5 +1,14 @@
 @import 'VARS';
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    width: 50%;
+    margin: 0 auto;
+}
+
 nav {
     background-color: $color-dark-blue;
     ul {
@@ -33,11 +42,30 @@ nav {
     background-image: url("../slike/intro.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    p, h1 {
-        text-align: center;
-        color: white;
-        text-decoration: none;
+    margin: 0;
+    padding-top: 400px;
+    .intro {
+        background-color: rgba($color: #374249, $alpha: 0.5);
+        p, h1 {
+            margin: 0;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h1 + p {
+            font-size: 1.2em;
+        }
     }
+    
 }
 
 
