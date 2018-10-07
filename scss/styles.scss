@@ -1,4 +1,7 @@
 @import 'VARS';
+@import 'MIXINS';
+
+@include clearfix;
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -91,11 +94,7 @@ nav {
     }
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+
 
 
 .offers {
@@ -153,110 +152,49 @@ nav {
     }
 }
 
-// .offers {
-//     padding: 20px 200px;
-//     border: solid 1px red; 
-//     height: 1000px;
-//     img {
-//         width: 200px;
-//         border-radius: 100px;   
-//         &.left {
-//             float: left;
-//         }
-//         &.right {
-//             float: right;
-//         }
-//     }
-//     div {
-//         //visibility: hidden;
-//         height: 200px;
-//         margin: 50px 0px;
-//         border: solid 1px red;
-//     }
+.pricing {
+    h2, p {
+        color: $color-heading;
+        text-align: center;
+        margin: 3em auto 3em auto;
+    }
 
-//     div.left {
-//         float: left;
-//         margin-left: 100px;
-//         clear: right;
-//     }
-
-//    div.right {
-//         float: right;
-//         margin-right: 100px;
-
-//     }
-
-//     img.left:hover + div.left {
-//         visibility: visible;
-//     }
-
-//    img.right:hover + div.right {
-//         visibility: visible;
-//     }
-
-// }
+    h2 {
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+}
 
 
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 70%;
+    margin: 10px auto;
 
+    tr {
+        height: 50px;
+        }
 
+    th, td {
+        border: solid 1px $color-dark-blue;
+    }
 
-    // ul {
-    //     background-color: $color-dark-blue;
-    //     list-style-type: none;
-    //     margin: 0;
-    //     padding: 0;
-    //     li {
-    //         float: right;
-    //         a {
-    //             display: block;
-    //             text-decoration: none;
-    //             text-align: center;
-    //             font-size: 1.6rem;
-    //             padding: 1rem;
-    //             color: white;
-    //         }
-    //     } 
-    // }
+    td {
+        color: $color-dark-blue;
+    }
 
-    // img {
-    //     float: right;
-    //     width: 3.2rem;
-    // }
-    
+    td[rowspan="2"] {
+        border-left: none;
+        border-top: none;
+    }
 
+    th {
+        color: white;
+        background-color: $color-dark-blue;
+        &[colspan="2"], &[rowspan="3"] {
+            background-color: $color-red;
+        }
+    }
 
-
-
-
-
-// section {
-//     border: 1px solid $color-red;
-//     height: 7em;
-// }
-
-
-// div {
-//     border: 1px solid $color-red;
-//     float: left;
-//     width: 33%;
-//     height: 3em;
-// }
-
-// .right {
-//     display: none;
-// }
-
-// .left:hover + .right {
-//     display: block;
-// }
-
-// @media screen and (max-width: 600px) {
-//     .left {
-//         float: none;
-//     }
-
-//     .right {
-//         float: none;
-//         display: block;
-//     }
-// }
+}
